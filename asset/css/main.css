@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*outline: 1px solid red;*/
+}
+img{
+    /* Hacemos que las imágenes sean responsivas por defecto */
+    max-width: 100%; 
+    display: block;
+}
+
+/* Estilos para las imágenes del carrusel */
+.carousel-item img {
+    height: 50vh; /* 50% de la altura de la ventana */
+    object-fit: cover; /* Cubre el espacio sin deformar la imagen */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+/* Estilos para las imágenes de las tarjetas */
+.card-img-top {
+    height: 200px; /* Altura fija para las imágenes de las tarjetas */
+    object-fit: cover; /* Cubre el espacio sin deformar la imagen */
+}
+.aviso {
+    height: 24px; /* Tamaño pequeño para icono */
+    width: 24px; /* Tamaño pequeño para icono */
+    object-fit: cover; /* Cubre el espacio sin deformar la imagen */
+    border-radius: 4px; /* Esquinas ligeramente redondeadas */
+}
+
+.circulo {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db; /* Color de fondo azul */
+    border-radius: 50%; /* Hace que el div sea un círculo */
+    margin: 200px auto; /* Centra el círculo horizontalmente */
+    
+}
+
+.row-foto {
+    background-image: url('/asset/img/familia.webp');
+    background-size: cover;
+    background-position: center;
+    border-radius: 18px;
+   
+    margin: 20px auto;
+    max-width: auto;
+    min-height: 800px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    position: relative;
+    animation: fade 1s ease;
+}
+
+/* Capa oscura para que el texto se lea mejor */
+.row-foto::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 18px;
+}
+
+.row-foto * {
+    position: relative; /* Hace que el texto quede encima del overlay */
+}
+.texto-foto {
+    color: white;
+    text-align: center;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
