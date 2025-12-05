@@ -90,17 +90,7 @@ document.querySelectorAll(".card").forEach((card) => {
 });
 
 
-// Parallax global leve
-gsap.to("body", {
-  y: -50,
-  ease: "none",
-  scrollTrigger: {
-    trigger: "body",
-    start: "top top",
-    end: "bottom bottom",
-    scrub: true
-  }
-});
+
 
 // ANIMACIÓN GLOBAL ESTILO "CARDS" PARA TODA LA PÁGINA
 document.querySelectorAll(".section-anim").forEach((section) => {
