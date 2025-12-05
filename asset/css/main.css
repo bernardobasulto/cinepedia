@@ -10,11 +10,24 @@ img{
     display: block;
 }
 
-/* Estilos para las imágenes del carrusel */
+/* ESTILOS CORREGIDOS PARA EL CARRUSEL */
+.carousel-item {
+    height: 70vh; /* Altura unificada para todo el carrusel */
+    width: 100%;
+}
+
+/* Estilo específico para las imágenes del carrusel */
 .carousel-item img {
-    height: 50vh; /* 50% de la altura de la ventana */
-    object-fit: cover; /* Cubre el espacio sin deformar la imagen */
-    width: 100%; /* Asegura que ocupe todo el ancho */
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Hace que la imagen llene el contenedor */
+}
+
+/* Estilo específico para los iframes/videos */
+.carousel-item iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 /* Estilos para las imágenes de las tarjetas */
@@ -22,6 +35,7 @@ img{
     height: 200px; /* Altura fija para las imágenes de las tarjetas */
     object-fit: cover; /* Cubre el espacio sin deformar la imagen */
 }
+
 .aviso {
     height: 24px; /* Tamaño pequeño para icono */
     width: 24px; /* Tamaño pequeño para icono */
@@ -35,7 +49,6 @@ img{
     background-color: #3498db; /* Color de fondo azul */
     border-radius: 50%; /* Hace que el div sea un círculo */
     margin: 200px auto; /* Centra el círculo horizontalmente */
-    
 }
 
 .row-foto {
@@ -69,6 +82,7 @@ img{
 .row-foto * {
     position: relative; /* Hace que el texto quede encima del overlay */
 }
+
 .texto-foto {
     color: white;
     text-align: center;
@@ -79,3 +93,13 @@ img{
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* RESPONSIVE: Altura más pequeña para móviles */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 50vh; /* Altura más pequeña en móviles */
+    }
+    
+    .row-foto {
+        min-height: 500px; /* Altura más pequeña en móviles */
+    }
+}
