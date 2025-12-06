@@ -42,23 +42,37 @@
         </nav>
     </header>
     <main>
-        <section class="fondo-imagen section-anim">
-            <div class="row row-foto">
-                <div class="texto-foto">
-                    <h2 class="text-white text-center">La Mejor Forma de Compartir en Familia</h2>
-                </div class="col-12">
-                <div>
-                    <p class="text-white text-center">
-                        Explora historias inolvidables, revive clásicos y descubre nuevas aventuras
-                        junto a quienes más quieres. Cinepedia reúne lo mejor del cine y las series
-                        para disfrutar en familia.
-                    </p>
-                </div>
-                <div class="col-6 mx-auto text-center">
-                    <button type="button" class="btn btn-primary">Acceder</button>
-                </div>
+        <section class="video-section section-anim">
+    <div class="youtube-background">
+        <!-- YouTube como fondo - Con parámetros para autoplay, mute, loop, sin controles -->
+        <iframe 
+            src="https://www.youtube.com/embed/BxBof_p3_es?autoplay=1&mute=1&loop=1&playlist=BxBof_p3_es&controls=0&showinfo=0&modestbranding=1&rel=0"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            class="youtube-video">
+        </iframe>
+        
+        <div class="video-overlay"></div>
+        
+        <!-- Contenido sobre el video -->
+        <div class="video-content">
+            <div class="texto-foto">
+                <h2 class="text-white text-center">La Mejor Forma de Compartir en Familia</h2>
             </div>
-        </section>
+            <div>
+                <p class="text-white text-center">
+                    Explora historias inolvidables, revive clásicos y descubre nuevas aventuras
+                    junto a quienes más quieres. Cinepedia reúne lo mejor del cine y las series
+                    para disfrutar en familia.
+                </p>
+            </div>
+            <div class="col-6 mx-auto text-center">
+                <button type="button" class="btn btn-primary">Acceder</button>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section class="container py-4 section-anim">
             <div class="row justify-content-center">
@@ -128,7 +142,9 @@
             <div class="row m-3">
                 <div class="col-md-3">
                     <div class="card" id="card-move">
-                        <img src="asset/img/accion.jpg" class="card-img-top" alt="...">
+                        <a href="categorias.html">
+                            <img src="asset/img/accion.jpg" class="card-img-top" alt="...">
+                        </a>
                         <div class="card-body">
                             <h5 class="card-title mb-2">Accion</h5>
                             <p class="card-text">SHistorias llenas de adrenalina, persecuciones intensas y héroes que
@@ -148,10 +164,12 @@
                 </div>
                 <div class="col-md-3">
                     <div class="card">
-                        <img src="asset/img/humor.jpeg" class="card-img-top" alt="...">
+                        <a href="categorias.html">
+                            <img src="asset/img/humor.jpeg" class="card-img-top" alt="...">
+                        </a>
                         <div class="card-body">
-                            <h5 class="card-title">Accion</h5>
-                            <p class="card-text">SHistorias llenas de adrenalina, persecuciones intensas y héroes que
+                            <h5 class="card-title">Humor</h5>
+                            <p class="card-text">Historias llenas de adrenalina, persecuciones intensas y héroes que
                                 desafían los límites..</p>
                             <a class="btn btn-primary mb-2" data-bs-toggle="collapse" href="#collapseExample2"
                                 role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -168,7 +186,9 @@
                 </div>
                 <div class="col-md-3">
                     <div class="card">
-                        <img src="asset/img/911.png" class="card-img-top" alt="...">
+                        <a href="categorias.html">
+                            <img src="asset/img/911.png" class="card-img-top" alt="...">
+                        </a>
                         <div class="card-body">
                             <h5 class="card-title">Drama</h5>
                             <p class="card-text">Relatos profundos que exploran emociones intensas, decisiones difíciles
@@ -194,7 +214,9 @@
                 </div>
                 <div class="col-md-3">
                     <div class="card">
-                        <img src="asset/img/aventura.webp" class="card-img-top" alt="...">
+                        <a href="categorias.html">
+                            <img src="asset/img/aventura.webp" class="card-img-top" alt="...">
+                        </a>
                         <div class="card-body">
                             <h5 class="card-title">Aventura</h5>
                             <p class="card-text">Viajes épicos, mundos fantásticos y héroes que se embarcan en misiones
